@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. V. Srinivas - Research Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+         /* Animation class */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in.scrolled {
+           opacity: 1;
+           transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+             <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academic-qualifications.html">Academic Qualifications</a></li>
+                <li><a href="teaching-experience.html">Teaching Experience</a></li>
+                <li><a href="research-experience.html">Research Experience</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="conferences.html">Conferences</a></li>
+                <li><a href="Invited-talks.html">Invited-talks</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="research-experience">
+        <h2 class = "fade-in">Research Experience</h2>
+         <div class="research-summary fade-in">
+            <p>Six Research scholars were awarded Ph.D and two are currently doing their Ph.D.</p>
+         </div>
+          <h2 class ="fade-in">Administrative Experience</h2>
+         <div class="admin-experience fade-in">
+                <ul>
+                    <li>
+                        <span class="role">Head, Department of Mathematics</span>, <span class="institution">UCSS, O.U</span> (<span class="dates">2018 - 2020</span>)
+                    </li>
+                    <li>
+                        <span class="role">Placement Officer</span>, <span class="institution">UCSS, O.U</span> (<span class="dates">2020 - 2022</span>)
+                    </li>
+                </ul>
+          </div>
+
+         <h2 class = "fade-in">Academic Achievements</h2>
+         <div class="academic-achievements fade-in">
+            <ol>
+                 <li>Winner of Gold medal in X Class at School Level.</li>
+                 <li>Recipient of merit scholar ships in Intermediate and Degree Levels.</li>
+                 <li>Got 39th rank in Ed.CET.</li>
+                 <li>Qualified in NET conducted by CSIR.</li>
+                 <li>Completed Research as JRF and SRF.</li>
+                 <li>One of Research Papers is reviewed by AMS and name is included in Bibliographic Files.</li>
+                 <li>One of research papers is accepted at International conference held at London,2008.</li>
+                <li>Received 6 times Best teacher Award at SNIST, based on the opinion of the students and the results of JNTU.</li>
+                <li>Organized a National Conference on NEW THRESHOLDS IN PURE & APPLIED MATHEMATICS, July 13-14, 2009.</li>
+                <li>Engaged Mathematics, Probability & Statistics papers for MS course offered by WIPRO (WASE- Wipro Academy of Software Excellence) in collaboration with BITS – PILANI since August 2007.</li>
+                <li>Organized two seminars at Mathematics Department, UCSS in the years 2018 and 2019 sponsored by TSCOST.</li>
+                <li>Author of a book “Differential Equations and Laplace Transforms with Applications”.</li>
+            </ol>
+          </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Dr. V. Srinivas. All rights reserved.</p>
+    </footer>
+    
+     <script>
+        // JavaScript to handle scroll animations
+        const scrollElements = document.querySelectorAll(".fade-in");
+
+        const elementInView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+
+        const hideScrollElement = (element) => {
+            element.classList.remove("scrolled");
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el)) {
+                    displayScrollElement(el);
+                } else {
+                    hideScrollElement(el);
+                }
+            });
+        };
+
+           // Trigger animations on page load for elements already in view
+        handleScrollAnimation();
+
+        window.addEventListener("scroll", () => {
+            handleScrollAnimation();
+        });
+
+    </script>
+</body>
+</html>

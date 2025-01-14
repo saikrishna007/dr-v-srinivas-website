@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. V. Srinivas - Academic Qualifications</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academic-qualifications.html">Academic Qualifications</a></li>
+                <li><a href="teaching-experience.html">Teaching Experience</a></li>
+                <li><a href="research-experience.html">Research Experience</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="conferences.html">Conferences</a></li>
+                <li><a href="Invited-talks.html">Invited-talks</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="qualifications">
+        <h2>Academic Qualifications</h2>
+        <table class="scroll-animation">
+            <thead>
+              <tr class = "scroll-animation">
+                  <th>Degree</th>
+                  <th>University</th>
+                  <th>Year</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr class="scroll-animation">
+                    <td>Ph.D. (JRF, CSIR)</td>
+                    <td>Osmania University, Hyderabad</td>
+                    <td>2001</td>
+                </tr>
+                <tr class="scroll-animation">
+                    <td>M.Sc.</td>
+                    <td>Osmania University, Hyderabad</td>
+                    <td>1995</td>
+                </tr>
+                <tr class="scroll-animation">
+                    <td>B.Sc.</td>
+                    <td>Osmania University, Hyderabad</td>
+                    <td>1990</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>© 2025 Dr. V. Srinivas. All rights reserved.</p>
+    </footer>
+
+   <script>
+        // JavaScript to handle scroll animations
+        const scrollElements = document.querySelectorAll(".scroll-animation");
+
+        const elementInView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+
+        const hideScrollElement = (element) => {
+            element.classList.remove("scrolled");
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el)) {
+                    displayScrollElement(el);
+                } else {
+                    hideScrollElement(el);
+                }
+            });
+        };
+        
+         // Trigger animations on page load for elements already in view
+        handleScrollAnimation();
+        
+        window.addEventListener("scroll", () => {
+            handleScrollAnimation();
+        });
+
+        
+    </script>
+</body>
+</html>

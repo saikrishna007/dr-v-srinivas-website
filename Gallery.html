@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. V. Srinivas - Gallery</title>
+     <link rel="stylesheet" href="styles.css">
+    <style>
+         /* Animation class */
+        .fade-in {
+             opacity: 0;
+            transform: translateY(20px);
+             transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in.scrolled {
+           opacity: 1;
+           transform: translateY(0);
+        }
+        
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+           transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        .slide-in-left.scrolled {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+           <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academic-qualifications.html">Academic Qualifications</a></li>
+                <li><a href="teaching-experience.html">Teaching Experience</a></li>
+                <li><a href="research-experience.html">Research Experience</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="conferences.html">Conferences</a></li>
+                <li><a href="Invited-talks.html">Invited-talks</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="gallery">
+        <h2 class="fade-in">Gallery</h2>
+
+      <div class="image-container">
+          <img src="IMG01.jpg" alt="Image 1" class ="gallery-image slide-in-left"/>
+          <img src="IMG02.jpg" alt="Image 2" class ="gallery-image slide-in-left"/>
+          <img src="IMG03.jpg" alt="Image 3" class ="gallery-image slide-in-left"/>
+          <img src="IMG05.jpg" alt="Image 5" class ="gallery-image slide-in-left"/>
+          <img src="IMG06.jpg" alt="Image 6" class ="gallery-image slide-in-left"/>
+          <img src="IMG07.jpg" alt="Image 7" class ="gallery-image slide-in-left"/>
+          <img src="IMG08.jpg" alt="Image 8" class ="gallery-image slide-in-left"/>
+          <img src="IMG09.jpg" alt="Image 9" class ="gallery-image slide-in-left"/>
+          <img src="IMG10.jpg" alt="Image 10" class ="gallery-image slide-in-left"/>
+           <img src="IMG11.jpg" alt="Image 11" class ="gallery-image slide-in-left"/>
+           <img src="IMG12.jpg" alt="Image 12" class ="gallery-image slide-in-left"/>
+    </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Dr. V. Srinivas. All rights reserved.</p>
+    </footer>
+     <script>
+        // JavaScript to handle scroll animations
+        const scrollElements = document.querySelectorAll(".slide-in-left, .fade-in");
+
+        const elementInView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+
+        const hideScrollElement = (element) => {
+            element.classList.remove("scrolled");
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el)) {
+                    displayScrollElement(el);
+                } else {
+                    hideScrollElement(el);
+                }
+            });
+        };
+
+           // Trigger animations on page load for elements already in view
+        handleScrollAnimation();
+
+        window.addEventListener("scroll", () => {
+            handleScrollAnimation();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. V. Srinivas - Contact</title>
+     <link rel="stylesheet" href="styles.css">
+    <style>
+         /* Animation class */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in.scrolled {
+           opacity: 1;
+           transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+           <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academic-qualifications.html">Academic Qualifications</a></li>
+                <li><a href="teaching-experience.html">Teaching Experience</a></li>
+                <li><a href="research-experience.html">Research Experience</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="conferences.html">Conferences</a></li>
+                <li><a href="Invited-talks.html">Invited-talks</a></li>
+                 <li><a href="gallery.html">Gallery</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+         <h2 class = "fade-in">Contact Dr. V. Srinivas</h2>
+       <div class="contact-description fade-in">
+            <p>
+                Please use the form below to get in touch with Dr. V. Srinivas.
+                 Your query will be addressed as soon as possible.
+            </p>
+       </div>
+        <div class="form-container fade-in">
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSceHUnSP2c36OBTiZG_6vtjHTPMoli07Jfw25r8dEiQ4uzjTg/viewform?embedded=true"
+                width="640" height="775" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+         </div>
+    </section>
+
+    <footer>
+        <p>© 2023 Dr. V. Srinivas. All rights reserved.</p>
+    </footer>
+     <script>
+        // JavaScript to handle scroll animations
+        const scrollElements = document.querySelectorAll(".fade-in");
+
+        const elementInView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+
+        const hideScrollElement = (element) => {
+            element.classList.remove("scrolled");
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el)) {
+                    displayScrollElement(el);
+                } else {
+                    hideScrollElement(el);
+                }
+            });
+        };
+
+           // Trigger animations on page load for elements already in view
+        handleScrollAnimation();
+
+        window.addEventListener("scroll", () => {
+            handleScrollAnimation();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,598 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #1abc9c;
+}
+
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1abc9c;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1abc9c;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: #fff;
+    margin-top: 40px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #1abc9c;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.experience-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.experience-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1abc9c; /* Teal color for a professional look */
+    background: rgba(26, 188, 156, 0.1); /* Light teal background */
+    padding: 10px 20px;
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #1abc9c; /* Teal border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Academic Qualifications */
+.qualifications-box {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.qualifications-box.scrolled {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-from-left {
+    transform: translateX(-100%);
+}
+
+.slide-from-right {
+    transform: translateX(100%);
+}
+
+.qualification-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Experience Boxes */
+.experience-box {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.experience-box.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .experience-text {
+        font-size: 1.25rem;
+    }
+
+    .experience-number {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+    }
+}
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+table.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #1abc9c;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    /* border: 2px solid red; Debugging style REMOVED */
+}
+
+tr {
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+tr.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Specific Styles for Teaching Experience */
+.experience-list ul {
+    list-style-type: none; /* Remove default bullet */
+    padding-left: 0; /* Reset padding */
+}
+
+.experience-list ul li {
+    margin-bottom: 15px; /* Spacing for each item */
+    padding-left: 20px; /* Indent list items */
+    position: relative; /* For custom bullets */
+}
+
+
+.experience-list ul li::before {
+    content: '•'; /* Custom bullet point */
+    color: #1abc9c; /* Bullet color */
+    position: absolute; /* Position the bullet */
+    left: 0;
+    top: 0;
+}
+
+.role {
+    font-weight: bold;
+}
+
+.institution {
+    font-style: italic;
+}
+
+.dates {
+    font-style: normal;
+    color: #777;
+}
+
+.courses-taught {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.courses-group {
+    flex-basis: calc(50% - 10px); /* Split space with a small gap */
+    padding: 15px;
+    border-radius: 8px;
+    background: #f1f1f1; /* Light gray background */
+     box-sizing: border-box; /* Include padding in width calculation */
+     margin-bottom: 0px; /* Removes bottom space */
+}
+.courses-group h4{
+    margin-bottom:10px;
+}
+/* Specific Styles for Teaching Experience */
+
+/* Specific styles for Research Experience */
+.research-summary {
+    margin-bottom: 20px;
+     padding: 15px;
+     border-radius: 8px;
+     background: #f1f1f1;
+     line-height: 1.7;
+ }
+ .admin-experience ul{
+    list-style-type: none;
+    padding-left: 0px;
+ }
+ 
+ .admin-experience ul li {
+     margin-bottom: 15px; /* Spacing for each item */
+     padding-left: 20px; /* Indent list items */
+     position: relative; /* For custom bullets */
+ }
+ 
+ .admin-experience ul li::before {
+     content: '•'; /* Custom bullet point */
+     color: #1abc9c; /* Bullet color */
+     position: absolute; /* Position the bullet */
+     left: 0;
+     top: 0;
+ }
+ 
+ .academic-achievements ol {
+     list-style-type: decimal; /* Use numbered list */
+     margin-left: 20px; /* Indent list */
+     padding-left: 20px;
+ }
+ 
+ .academic-achievements ol li {
+      margin-bottom: 10px;
+     line-height: 1.7;
+ }
+ 
+ 
+ .role {
+     font-weight: bold;
+ }
+ 
+ .institution {
+     font-style: italic;
+ }
+ 
+ .dates {
+     font-style: normal;
+     color: #777;
+ }
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+     background-color: #f9f9f9; /* Light gray background */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+     justify-content: center; /* Center the navigation items */
+}
+
+nav ul li {
+   margin: 0 15px; /* Space out the navigation items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+
+section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    background: white;
+     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px; /* Rounded corners for sections */
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+     color: #333; /* Dark gray color for headings */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Specific styles for Publications */
+.publication-list ol {
+    list-style-type: decimal; /* Use a numbered list */
+    margin-left: 20px;
+     padding-left: 20px;
+}
+
+.publication-list ol li {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    background: #f1f1f1;
+    padding: 10px;
+     border-radius: 8px;
+}
+.zbl{
+    font-style: italic;
+     color: #777;
+}
+.database{
+    font-weight: bold;
+     color: #777;
+}
+
+.publication-list ol li strong {
+    font-size: 1.1rem;
+}
+
+/* Specific styles for Gallery */
+.gallery-summary {
+    margin-bottom: 20px;
+     padding: 15px;
+     border-radius: 8px;
+     background: #f1f1f1;
+     line-height: 1.7;
+ }
+ .image-container {
+     display: flex;
+      flex-direction: column; /* Arrange images in a column */
+     align-items: center; /* Center images horizontally */
+    
+ }
+ .gallery-image{
+   max-width: 80%;
+     height: auto;
+     margin-bottom: 20px; /* Space between images */
+     border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* Responsive Images */
+ @media (max-width: 768px) {
+     .gallery-image {
+        max-width: 95%;
+     }
+ }
+
+ /* Specific Styles for Contact Page */
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+     max-width: 700px; /* Maximum width for the form */
+    
+}
+.contact-description{
+   margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f1f1f1;
+    line-height: 1.7;
+}
+
+/* Specific styles for Conferences */
+.conference-list ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+.conference-list ol li {
+     margin-bottom: 25px; /* Increase spacing between list items */
+    line-height: 1.6; /* Consistent line height */
+     background: #f1f1f1; /* Light gray background */
+    padding: 15px; /* Increased padding for more space */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.conference-title {
+    display: block; /* Title on its own line */
+    font-size: 1.1rem;
+     margin-bottom: 5px; /* Space between the title and details */
+}
+.conference-details {
+     display: block; /* Details on its own line */
+}
+
+.conference-name {
+    font-weight: bold; /* Make conference names bold */
+     color: #555; /* Gray color for conference names */
+}
+
+.dates {
+      color: #777;
+    font-style: italic; /* Italicize the dates */
+}
+
+
+/* Specific Styles for Invited Talks */
+.talk-list ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+     margin-left: 20px;
+}
+
+.talk-list ol li {
+     margin-bottom: 25px;
+    line-height: 1.6;
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.talk-title {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.talk-details {
+      display: block;
+}
+
+.institution {
+    font-style: italic;
+    color: #555;
+}
+.organization{
+    font-weight: bold;
+    color:#555;
+}
+
+.dates {
+    color: #777;
+    font-style: italic;
+}

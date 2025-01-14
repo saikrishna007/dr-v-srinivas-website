@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. V. Srinivas - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academic-qualifications.html">Academic Qualifications</a></li>
+                <li><a href="teaching-experience.html">Teaching Experience</a></li>
+                <li><a href="research-experience.html">Research Experience</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="conferences.html">Conferences</a></li>
+                <li><a href="Invited-talks.html">Invited-talks</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="slide-in-left">
+        <div class="profile">
+            <img src="picture.jpg" alt="Dr. V. Srinivas" class="profile-img">
+            <div class="profile-info">
+                <h1>Dr. V. Srinivas</h1>
+                <p>Associate Professor of Mathematics</p>
+                <p>University College of Science, Osmania University, Hyderabad</p>
+                <p class="experience-text">
+                    <span class="experience-number">25+</span> Years of Experience
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview">
+        <h2 class="scroll-animation">Overview</h2>
+
+        <!-- Academic Qualifications -->
+        <div class="qualifications-box scroll-animation slide-from-left">
+            <h3>Academic Qualifications</h3>
+            <div class="qualification-item">
+                <p><strong>Ph.D.</strong></p>
+                <p>Osmania University, Hyderabad</p>
+                <p>2001</p>
+            </div>
+        </div>
+
+        <div class="qualifications-box scroll-animation slide-from-right">
+            <div class="qualification-item">
+                <p><strong>M.Sc.</strong></p>
+                <p>Osmania University, Hyderabad</p>
+                <p>1995 (80% - Distinction)</p>
+            </div>
+        </div>
+
+        <div class="qualifications-box scroll-animation slide-from-left">
+            <div class="qualification-item">
+                <p><strong>B.Sc.</strong></p>
+                <p>Osmania University, Hyderabad</p>
+                <p>1990</p>
+            </div>
+        </div>
+
+        <!-- Teaching Experience -->
+        <h3 class="scroll-animation">Teaching Experience</h3>
+        <div class="experience-box scroll-animation">
+            <ul>
+                <li><strong>Associate Professor</strong>, UCS, Hyderabad (April 2022 - Present)</li>
+                <li><strong>Assistant Professor</strong>, UCS, Hyderabad (February 2022 - March 2022)</li>
+                <li><strong>Assistant Professor</strong>, UCSS, Hyderabad (2013 - February 2022)</li>
+                <li><strong>Associate Professor</strong>, Sreenidhi Institute of Science and Technology, Ghatkesar (2005 - 2013)</li>
+                <li><strong>Assistant Professor</strong>, Sreenidhi Institute of Science and Technology, Ghatkesar (1999 - 2005)</li>
+            </ul>
+        </div>
+
+        <!-- Research Experience -->
+        <h3 class="scroll-animation">Research Experience</h3>
+        <div class="experience-box scroll-animation">
+            <ul>
+                <li>Six Research scholars awarded Ph.D.</li>
+                <li>Two Research scholars currently pursuing Ph.D.</li>
+            </ul>
+        </div>
+
+        <!-- Publications -->
+        <h3 class="scroll-animation">Publications</h3>
+        <div class="experience-box scroll-animation">
+            <ul>
+                <li>Published over 70 research papers in national and international journals.</li>
+                <li>Notable publications include works on Fixed Point Theorems, Cryptography.</li>
+            </ul>
+        </div>
+
+        <!-- Conferences -->
+        <h3 class="scroll-animation">Conferences</h3>
+        <div class="experience-box scroll-animation">
+            <ul>
+                <li>Presented papers at numerous national and international conferences.</li>
+            </ul>
+        </div>
+
+        <!-- Invited-talks -->
+        <h3 class="scroll-animation">Invited-talks</h3>
+        <div class="experience-box scroll-animation">
+            <ul>
+                <li>Delivered lectures on Cryptography, Number Theory, and Graph Theory at various institutions.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dr. V. Srinivas. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle scroll animations
+        const scrollElements = document.querySelectorAll(".scroll-animation");
+
+        const elementInView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+
+        const hideScrollElement = (element) => {
+            element.classList.remove("scrolled");
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el)) {
+                    displayScrollElement(el);
+                } else {
+                    hideScrollElement(el);
+                }
+            });
+        };
+
+        window.addEventListener("scroll", () => {
+            handleScrollAnimation();
+        });
+
+        // Trigger animations on page load for elements already in view
+        handleScrollAnimation();
+    </script>
+</body>
+</html>
